@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 782213012
+    url: jdbc:mysql://localhost/db4?serverTimezone=UTC
+  jackson:
+    default-property-inclusion: non_null
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      #  jackson:
+      #    default-property-inclusion: non_null
+  thymeleaf:
+    prefix:
+      classpath: /templates/
+      cache: false
+  freemarker:
+    suffix: .ftl
+    content-type: text/html
+    charset: UTF-8
+        # 设置页面缓存
+    cache: false
+        # 设置ftl文件路径，默认是/templates，为演示效果添加role
+    template-loader-path: classpath:/templates/
+
+  mvc:
+     static-path-pattern: /static/**
+server:
+  servlet:
+    context-path: /mysell
+
+wechat:
+  mpAppId: wx7319df89cdbffa6d
+  mpAppSecret: bbb316fcf47f3140df2af55dfade9bb0
+  openAppId: wx7319df89cdbffa6d
+  openAppSecret: bbb316fcf47f3140df2af55dfade9bb0
+
+projectUrl:
+  wechatMpAuthorize: http://yes123.vaiwan.com
+  wechatOpenAuthorize: http://yes123.vaiwan.com
+  sell:  http://locahost:8080
